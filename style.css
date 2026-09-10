@@ -1,0 +1,551 @@
+/* =========================
+   RÉGLAGES GÉNÉRAUX
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #181818;
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(1180px, 92%);
+    margin: auto;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.header {
+    background: #090909;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid #e30613;
+}
+
+.header-content {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo-text {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.logo-text {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav a {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.nav a:hover {
+    color: #e30613;
+}
+
+.telephone-header {
+    background: #e30613;
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-weight: 800;
+}
+
+
+/* =========================
+   ACCUEIL
+========================= */
+
+.hero {
+    min-height: 650px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.92) 0%,
+            rgba(0, 0, 0, 0.70) 45%,
+            rgba(0, 0, 0, 0.20) 100%
+        ),
+        url("images/garage.jpg");
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.petit-titre {
+    display: inline-block;
+    background: #e30613;
+    padding: 5px 12px;
+    margin-bottom: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 78px);
+    max-width: 850px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.hero h1 span {
+    display: block;
+    color: #e30613;
+}
+
+.hero-description {
+    max-width: 700px;
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+.hero-services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 30px 0;
+    font-weight: 700;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+
+/* =========================
+   BOUTONS
+========================= */
+
+.btn {
+    display: inline-block;
+    border: none;
+    padding: 15px 24px;
+    border-radius: 5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn-red {
+    background: #e30613;
+    color: white;
+}
+
+.btn-red:hover {
+    background: #ba000a;
+}
+
+.btn-dark {
+    background: #111111;
+    color: white;
+    border: 1px solid white;
+}
+
+.btn-dark:hover {
+    background: white;
+    color: #111111;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    padding: 85px 0;
+}
+
+.section-mini-title {
+    color: #e30613;
+    font-size: 14px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.section h2,
+.garage-section h2 {
+    font-size: clamp(30px, 5vw, 46px);
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.section-intro {
+    max-width: 700px;
+    margin-bottom: 40px;
+}
+
+.red {
+    color: #e30613;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services-section {
+    background: #f4f4f4;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.service-card {
+    background: #111111;
+    color: white;
+    padding: 30px;
+    border-bottom: 4px solid #e30613;
+    border-radius: 8px;
+}
+
+.service-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   NOTRE GARAGE
+========================= */
+
+.garage-section {
+    background: #090909;
+    color: white;
+}
+
+.garage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.garage-image img {
+    height: 480px;
+    object-fit: cover;
+}
+
+.garage-text {
+    padding: 60px;
+}
+
+.garage-text p {
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   GALERIE
+========================= */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.gallery-card {
+    background: #111111;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.gallery-card img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.gallery-card figcaption {
+    color: white;
+    padding: 14px;
+    font-weight: 800;
+    border-bottom: 4px solid #e30613;
+}
+
+
+/* =========================
+   RENDEZ-VOUS & DEVIS
+========================= */
+
+.rdv-section {
+    background: #111111;
+    color: white;
+}
+
+.contact-form {
+    margin-top: 35px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label,
+.form-group p {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    font: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.radio-line {
+    display: inline-flex !important;
+    align-items: center;
+    margin-right: 25px;
+}
+
+.radio-line input {
+    width: auto;
+    margin-right: 8px;
+}
+
+.form-info {
+    margin-top: 15px;
+    font-size: 13px;
+    opacity: 0.75;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+    background: #050505;
+    color: white;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.contact-grid p {
+    margin-bottom: 15px;
+}
+
+.contact-grid a:hover {
+    color: #e30613;
+}
+
+
+/* =========================
+   PIED DE PAGE
+========================= */
+
+.footer {
+    background: #000000;
+    color: #aaaaaa;
+    text-align: center;
+    padding: 25px 0;
+    border-top: 1px solid #333333;
+}
+
+
+/* =========================
+   TÉLÉPHONE / TABLETTE
+========================= */
+
+@media (max-width: 900px) {
+
+    .nav {
+        display: none;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .garage-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .header-content {
+        min-height: 70px;
+    }
+
+    .logo-text {
+        font-size: 18px;
+    }
+
+    .telephone-header {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero-services {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .garage-text {
+        padding: 40px 20px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+}/* LOGO AG L'AUTO 17 */
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 290px;
+    height: 90px;
+    object-fit: contain;
+}/* AVANT / APRES */
+
+.gallery-card {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-8px);
+}
+
+.gallery-card figcaption {
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.gallery-card:first-child figcaption {
+    background: #e30613;
+}
+
+.gallery-card:nth-child(2) figcaption {
+    background: #111111;
+}.form-help {
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: normal !important;
+    opacity: 0.75;
+}/* LOGO DANS LA PARTIE CONTACT */
+
+.logo-contact {
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 20px;
+}/* MENTIONS LÉGALES */
+
+.mentions-section {
+    background: #111111;
+    color: #cccccc;
+    padding: 45px 0;
+}
+
+.mentions-section p {
+    margin-bottom: 15px;
+}
