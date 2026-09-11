@@ -36,7 +36,7 @@ a {
 
 
 /* =========================
-   MENU
+   EN-TÊTE
 ========================= */
 
 .header {
@@ -48,31 +48,61 @@ a {
     border-bottom: 3px solid #e30613;
 }
 
-.header-content {
-    min-height: 82px;
+
+/* =========================
+   LOGOS EN HAUT
+========================= */
+
+.header-logos {
+    background: #090909;
+}
+
+.logos-header {
+    min-height: 155px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 70px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 350px;
+    height: 125px;
+    object-fit: contain;
+}
+
+.logo-automarques {
+    width: 330px;
+    height: 125px;
+    object-fit: contain;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.header-menu {
+    background: #090909;
+    border-top: 1px solid #333333;
+}
+
+.menu-content {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
     gap: 30px;
-}
-
-.logo-text {
-    color: #ffffff;
-    font-size: 24px;
-    font-weight: 900;
-    font-style: italic;
-}
-
-.logo-text {
-    color: #ffffff;
-    font-size: 24px;
-    font-weight: 900;
-    font-style: italic;
 }
 
 .nav {
     display: flex;
-    gap: 25px;
+    align-items: center;
+    gap: 35px;
 }
 
 .nav a {
@@ -86,10 +116,12 @@ a {
 }
 
 .telephone-header {
+    margin-left: auto;
     background: #e30613;
     padding: 12px 18px;
     border-radius: 6px;
     font-weight: 800;
+    white-space: nowrap;
 }
 
 
@@ -296,34 +328,118 @@ a {
 
 
 /* =========================
-   GALERIE
+   RÉALISATIONS AVANT / APRÈS
 ========================= */
 
-.gallery {
+.realisations-section {
+    background: #f5f5f5;
+}
+
+.realisations-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
 }
 
-.gallery-card {
-    background: #111111;
+.realisation-card {
+    background: white;
+    border: 1px solid #dddddd;
+    border-radius: 18px;
     overflow: hidden;
-    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gallery-card img {
-    height: 250px;
+.realisation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* DEUX PHOTOS */
+
+.avant-apres-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.realisation-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.realisation-image:first-child {
+    border-right: 2px solid white;
+}
+
+.realisation-image img {
+    width: 100%;
+    height: 280px;
     object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-.gallery-card figcaption {
+.realisation-card:hover .realisation-image img {
+    transform: scale(1.03);
+}
+
+
+/* AVANT / APRÈS SUR LES PHOTOS */
+
+.photo-badge {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.avant-badge {
+    background: #111111;
     color: white;
-    padding: 14px;
-    font-weight: 800;
-    border-bottom: 4px solid #e30613;
+}
+
+.apres-badge {
+    background: #e30613;
+    color: white;
 }
 
 
+/* TEXTE SOUS LES PHOTOS */
+
+.realisation-content {
+    padding: 20px;
+}
+
+.realisation-tags {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.realisation-tags span {
+    background: #eeeeee;
+    color: #111111;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.realisation-tags .tag-red {
+    background: #ffdfe1;
+    color: #b6000a;
+}
+
+.realisation-content h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.realisation-content p {
+    color: #444444;
+}
 /* =========================
    RENDEZ-VOUS & DEVIS
 ========================= */
@@ -379,37 +495,152 @@ textarea {
     margin-right: 8px;
 }
 
-.form-info {
-    margin-top: 15px;
+.form-help {
+    margin-top: 8px;
     font-size: 13px;
+    font-weight: normal !important;
     opacity: 0.75;
 }
-
 
 /* =========================
    CONTACT
 ========================= */
 
 .contact-section {
-    background: #050505;
-    color: white;
+    background: #f3f3f3;
+    color: #111111;
 }
 
-.contact-grid {
+.contact-section h2 {
+    margin-bottom: 35px;
+}
+
+.contact-cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    gap: 25px;
+    align-items: stretch;
 }
 
-.contact-grid p {
-    margin-bottom: 15px;
+
+/* CARTE COORDONNÉES */
+
+.contact-card {
+    border-radius: 20px;
+    overflow: hidden;
 }
 
-.contact-grid a:hover {
+.contact-coordinates {
+    background: #111111;
+    color: white;
+    padding: 35px;
+}
+
+.contact-card h3 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.contact-line {
+    padding: 17px 0;
+    border-bottom: 1px solid #333333;
+}
+
+.contact-label {
+    display: block;
+    color: #e30613;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.contact-line p {
+    margin: 0;
+}
+
+.contact-line a {
+    text-decoration: underline;
+}
+
+.contact-line a:hover {
     color: #e30613;
 }
 
 
+/* BOUTON ITINÉRAIRE */
+
+.itineraire-btn {
+    display: inline-block;
+    margin-top: 25px;
+    background: #e30613;
+    color: white;
+    padding: 14px 22px;
+    border-radius: 10px;
+    font-weight: 800;
+}
+
+.itineraire-btn:hover {
+    background: #ba000a;
+}
+
+
+/* CARTE HORAIRES */
+
+.horaires-card {
+    background: white;
+    padding: 35px;
+    border: 1px solid #dddddd;
+    color: #111111;
+}
+
+.horaire-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 14px 0;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.horaire-line strong {
+    text-align: right;
+}
+
+.horaire-info {
+    margin-top: 18px;
+    background: #fff2d5;
+    padding: 18px;
+    border-radius: 12px;
+}
+
+
+/* =========================
+   BOUTON APPEL FIXE
+========================= */
+
+.floating-call {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 9999;
+
+    background: #e30613;
+    color: white;
+
+    padding: 15px 22px;
+    border-radius: 12px;
+
+    font-weight: 800;
+    font-size: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.35);
+
+    transition: 0.2s ease;
+}
+
+.floating-call:hover {
+    background: #ba000a;
+    transform: translateY(-3px);
+}
 /* =========================
    PIED DE PAGE
 ========================= */
@@ -422,15 +653,42 @@ textarea {
     border-top: 1px solid #333333;
 }
 
+.footer a:hover {
+    color: #e30613;
+}
+
 
 /* =========================
-   TÉLÉPHONE / TABLETTE
+   TABLETTE
 ========================= */
 
 @media (max-width: 900px) {
 
+    .logos-header {
+        min-height: 125px;
+        gap: 30px;
+    }
+
+    .logo img {
+        width: 260px;
+        height: 100px;
+    }
+
+    .logo-automarques {
+        width: 240px;
+        height: 100px;
+    }
+
     .nav {
         display: none;
+    }
+
+    .menu-content {
+        justify-content: flex-end;
+    }
+
+    .telephone-header {
+        margin-left: auto;
     }
 
     .services-grid {
@@ -447,19 +705,61 @@ textarea {
 }
 
 
-@media (max-width: 600px) {
+/* =========================
+   TÉLÉPHONE
+========================= */
 
-    .header-content {
-        min-height: 70px;
+@media (max-width: 600px) {
+    .realisations-grid {
+    grid-template-columns: 1fr;
+}
+
+.realisation-image img {
+    height: 190px;
+}
+.contact-cards {
+    grid-template-columns: 1fr;
+}
+
+.contact-coordinates,
+.horaires-card {
+    padding: 25px;
+}
+
+.horaire-line {
+    gap: 10px;
+}
+
+.floating-call {
+    right: 10px;
+    bottom: 10px;
+    padding: 12px 16px;
+    font-size: 13px;
+}
+    .logos-header {
+        min-height: 100px;
+        gap: 15px;
     }
 
-    .logo-text {
-        font-size: 18px;
+    .logo img {
+        width: 170px;
+        height: 80px;
+    }
+
+    .logo-automarques {
+        width: 145px;
+        height: 80px;
+    }
+
+    .menu-content {
+        min-height: 60px;
+        justify-content: center;
     }
 
     .telephone-header {
-        font-size: 13px;
-        padding: 10px;
+        margin: auto;
+        font-size: 14px;
+        padding: 10px 18px;
     }
 
     .hero {
@@ -491,61 +791,4 @@ textarea {
         grid-template-columns: 1fr;
         gap: 35px;
     }
-
-}/* LOGO AG L'AUTO 17 */
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    width: 290px;
-    height: 90px;
-    object-fit: contain;
-}/* AVANT / APRES */
-
-.gallery-card {
-    position: relative;
-    transition: transform 0.3s ease;
-}
-
-.gallery-card:hover {
-    transform: translateY(-8px);
-}
-
-.gallery-card figcaption {
-    text-align: center;
-    font-size: 16px;
-    text-transform: uppercase;
-}
-
-.gallery-card:first-child figcaption {
-    background: #e30613;
-}
-
-.gallery-card:nth-child(2) figcaption {
-    background: #111111;
-}.form-help {
-    margin-top: 8px;
-    font-size: 13px;
-    font-weight: normal !important;
-    opacity: 0.75;
-}/* LOGO DANS LA PARTIE CONTACT */
-
-.logo-contact {
-    width: 300px;
-    height: auto;
-    object-fit: contain;
-    margin-bottom: 20px;
-}/* MENTIONS LÉGALES */
-
-.mentions-section {
-    background: #111111;
-    color: #cccccc;
-    padding: 45px 0;
-}
-
-.mentions-section p {
-    margin-bottom: 15px;
 }

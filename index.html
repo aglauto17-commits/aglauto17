@@ -19,13 +19,30 @@
 <body>
 
     <!-- MENU -->
-    <header class="header">
+ <header class="header">
 
-        <div class="container header-content">
+    <!-- LIGNE DES LOGOS -->
+    <div class="header-logos">
+        <div class="container logos-header">
 
-<a href="#accueil" class="logo">
-    <img src="images/logo.png" alt="Logo AG L'AUTO 17">
-</a>
+            <a href="#accueil" class="logo">
+                <img src="images/logo.png" alt="Logo AG L'AUTO 17">
+            </a>
+
+            <img
+                src="images/automarques.jpg"
+                alt="Auto Marques"
+                class="logo-automarques"
+            >
+
+        </div>
+    </div>
+
+
+    <!-- LIGNE DU MENU -->
+    <div class="header-menu">
+
+        <div class="container menu-content">
 
             <nav class="nav">
                 <a href="#accueil">Accueil</a>
@@ -41,8 +58,9 @@
 
         </div>
 
-    </header>
+    </div>
 
+</header>
 
     <!-- ACCUEIL -->
     <main>
@@ -214,64 +232,185 @@
         </section>
 
 
-        <!-- REALISATIONS -->
-        <section id="realisations" class="section">
+<!-- REALISATIONS -->
+<section id="realisations" class="section realisations-section">
 
-            <div class="container">
+    <div class="container">
 
-                <p class="section-mini-title">
-                    Nos réalisations
-                </p>
+        <p class="section-mini-title">
+            Avant / Après
+        </p>
 
-                <h2>Découvrez notre savoir-faire</h2>
+        <h2>Quelques réalisations</h2>
 
-                <p class="section-intro">
-                    Quelques exemples de travaux réalisés en carrosserie
-                    et peinture.
-                </p>
+        <p class="section-intro">
+            Découvrez quelques exemples de travaux réalisés par AG L'AUTO 17.
+        </p>
 
-                <div class="gallery">
+        <div class="realisations-grid">
 
-                    <figure class="gallery-card">
+            <!-- RÉALISATION 1 -->
+            <article class="realisation-card">
+
+                <div class="avant-apres-images">
+
+                    <div class="realisation-image">
                         <img
                             src="images/avant1.jpg"
                             alt="Véhicule avant réparation carrosserie"
                         >
-                        <figcaption>Carrosserie — Avant</figcaption>
-                    </figure>
+                        <span class="photo-badge avant-badge">AVANT</span>
+                    </div>
 
-
-                    <figure class="gallery-card">
+                    <div class="realisation-image">
                         <img
                             src="images/apres1.jpg"
                             alt="Véhicule après réparation carrosserie"
                         >
-                        <figcaption>Carrosserie — Après</figcaption>
-                    </figure>
-
-
-                    <figure class="gallery-card">
-                        <img
-                            src="images/peinture1.jpg"
-                            alt="Préparation d'un véhicule avant peinture"
-                        >
-                        <figcaption>Préparation peinture</figcaption>
-                    </figure>
-
-
-                    <figure class="gallery-card">
-                        <img
-                            src="images/peinture2.jpg"
-                            alt="Travaux de peinture automobile"
-                        >
-                        <figcaption>Travaux de peinture</figcaption>
-                    </figure>
+                        <span class="photo-badge apres-badge">APRÈS</span>
+                    </div>
 
                 </div>
 
-            </div>
+                <div class="realisation-content">
 
-        </section>
+                    <div class="realisation-tags">
+                        <span>AVANT</span>
+                        <span class="tag-red">APRÈS</span>
+                    </div>
+
+                    <h3>Réparation carrosserie</h3>
+
+                    <p>
+                        Remise en état et finition de carrosserie.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- RÉALISATION 2 -->
+            <article class="realisation-card">
+
+                <div class="avant-apres-images">
+
+                    <div class="realisation-image">
+                        <img
+                            src="images/avant2.jpg"
+                            alt="Deuxième véhicule avant travaux"
+                        >
+                        <span class="photo-badge avant-badge">AVANT</span>
+                    </div>
+
+                    <div class="realisation-image">
+                        <img
+                            src="images/apres2.jpg"
+                            alt="Deuxième véhicule après travaux"
+                        >
+                        <span class="photo-badge apres-badge">APRÈS</span>
+                    </div>
+
+                </div>
+
+                <div class="realisation-content">
+
+                    <div class="realisation-tags">
+                        <span>AVANT</span>
+                        <span class="tag-red">APRÈS</span>
+                    </div>
+
+                    <h3>Remise en état</h3>
+
+                    <p>
+                        Travaux de carrosserie et finition.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- RÉALISATION 3 -->
+            <article class="realisation-card">
+
+                <div class="avant-apres-images">
+
+                    <div class="realisation-image">
+                        <img
+                            src="images/peinture1.jpg"
+                            alt="Préparation peinture automobile"
+                        >
+                    </div>
+
+                    <div class="realisation-image">
+                        <img
+                            src="images/peinture2.jpg"
+                            alt="Peinture automobile en atelier"
+                        >
+                    </div>
+
+                </div>
+
+                <div class="realisation-content">
+
+                    <div class="realisation-tags">
+                        <span class="tag-red">PEINTURE</span>
+                    </div>
+
+                    <h3>Préparation & peinture</h3>
+
+                    <p>
+                        Préparation des éléments et mise en peinture en atelier.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- RÉALISATION 4 -->
+            <article class="realisation-card">
+
+                <div class="avant-apres-images">
+
+                    <div class="realisation-image">
+                        <img
+                            src="images/atelier1.jpg"
+                            alt="Travaux dans l'atelier AG L'AUTO 17"
+                        >
+                    </div>
+
+                    <div class="realisation-image">
+                        <img
+                            src="images/atelier2.jpg"
+                            alt="Travaux réalisés par AG L'AUTO 17"
+                        >
+                    </div>
+
+                </div>
+
+                <div class="realisation-content">
+
+                    <div class="realisation-tags">
+                        <span class="tag-red">ATELIER</span>
+                    </div>
+
+                    <h3>Travaux en atelier</h3>
+
+                    <p>
+                        Mécanique, carrosserie et interventions diverses.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
 
 
         <!-- RENDEZ-VOUS -->
@@ -375,7 +514,23 @@
                         </div>
 
                     </div>
+<div class="form-group">
+    <label for="message">
+        Commentaire / Votre demande *
+    </label>
 
+    <textarea
+        id="message"
+        name="message"
+        rows="6"
+        placeholder="Décrivez votre demande, le problème rencontré ou les travaux souhaités..."
+        required
+    ></textarea>
+
+    <p class="form-help">
+        Ce champ est obligatoire.
+    </p>
+</div>
 
 <div class="form-group">
     <label for="photos">Ajouter des photos du véhicule</label>
@@ -424,10 +579,7 @@
                         Envoyer ma demande
                     </button>
 
-                    <p class="form-info">
-                        Pour le moment, le formulaire est visuel.
-                        Nous le rendrons fonctionnel ensuite.
-                    </p>
+
 
                 </form>
 
@@ -437,89 +589,138 @@
 
 
         <!-- CONTACT -->
-        <section id="contact" class="section contact-section">
+<section id="contact" class="section contact-section">
 
-            <div class="container contact-grid">
+    <div class="container">
 
-                <div>
+        <p class="section-mini-title red">
+            Contact
+        </p>
 
-<img src="images/logo.png" alt="Logo AG L'AUTO 17" class="logo-contact">
+        <h2>Nous contacter</h2>
 
-<p class="section-mini-title red">
-    Contact
-</p>
+        <div class="contact-cards">
 
+            <!-- COORDONNÉES -->
+            <div class="contact-card contact-coordinates">
+
+                <h3>Coordonnées</h3>
+
+                <div class="contact-line">
+                    <span class="contact-label">Adresse</span>
                     <p>
-                        📍 20 rue Nicolas Appert<br>
+                        20 rue Nicolas Appert<br>
                         17250 Pont-l'Abbé-d'Arnoult
                     </p>
+                </div>
 
+                <div class="contact-line">
+                    <span class="contact-label">Téléphone</span>
                     <p>
-                        📞
                         <a href="tel:0785624625">
                             07 85 62 46 25
                         </a>
                     </p>
+                </div>
 
+                <div class="contact-line">
+                    <span class="contact-label">E-mail</span>
                     <p>
-                        📧
                         <a href="mailto:aglauto17@gmail.com">
                             aglauto17@gmail.com
                         </a>
                     </p>
-
                 </div>
 
+                <a
+                    href="https://www.google.com/maps/search/?api=1&query=20+rue+Nicolas+Appert+17250+Pont-l%27Abbe-d%27Arnoult"
+                    target="_blank"
+                    class="itineraire-btn"
+                >
+                    📍 Ouvrir l'itinéraire
+                </a>
 
-                <div>
+            </div>
 
-                    <p class="section-mini-title red">
-                        Horaires
-                    </p>
 
-                    <p>
-                        <strong>Du lundi au vendredi :</strong><br>
-                        9h00 – 19h00
-                    </p>
+            <!-- HORAIRES -->
+            <div class="contact-card horaires-card">
 
-                    <p>
-                        Entre 12h00 et 14h00, merci de nous contacter
-                        avant de vous déplacer afin de vous assurer
-                        de notre présence au garage.
-                    </p>
+                <h3>Horaires</h3>
 
-                    <p>
-                        <strong>Samedi :</strong> sur rendez-vous
-                    </p>
+                <div class="horaire-line">
+                    <span>Lundi</span>
+                    <strong>9h00 – 19h00</strong>
+                </div>
 
-                    <p>
-                        <strong>Dimanche :</strong> fermé
-                    </p>
+                <div class="horaire-line">
+                    <span>Mardi</span>
+                    <strong>9h00 – 19h00</strong>
+                </div>
 
+                <div class="horaire-line">
+                    <span>Mercredi</span>
+                    <strong>9h00 – 19h00</strong>
+                </div>
+
+                <div class="horaire-line">
+                    <span>Jeudi</span>
+                    <strong>9h00 – 19h00</strong>
+                </div>
+
+                <div class="horaire-line">
+                    <span>Vendredi</span>
+                    <strong>9h00 – 19h00</strong>
+                </div>
+
+                <div class="horaire-line">
+                    <span>Samedi</span>
+                    <strong>Sur rendez-vous</strong>
+                </div>
+
+                <div class="horaire-line">
+                    <span>Dimanche</span>
+                    <strong>Fermé</strong>
+                </div>
+
+                <div class="horaire-info">
+                    <strong>Entre 12h00 et 14h00 :</strong>
+                    merci de nous contacter avant de vous déplacer afin de vous assurer de notre présence au garage.
                 </div>
 
             </div>
 
-        </section>
-
-    </main>
-
-
-    <!-- PIED DE PAGE -->
-    <footer class="footer">
-
-        <div class="container">
-
-<p>
-© AG L'AUTO 17 — Tous droits réservés |
-<a href="mentions-legales.html">Mentions légales</a>
-</p>
         </div>
 
-    </footer>
+    </div>
+
+</section>
+
+</main>
 
 
-    <script src="script.js"></script>
+<!-- PIED DE PAGE -->
+<footer class="footer">
+
+    <div class="container">
+
+        <p>
+            © AG L'AUTO 17 — Tous droits réservés |
+            <a href="mentions-legales.html">Mentions légales</a>
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- BOUTON APPEL QUI SUIT LE CLIENT -->
+<a href="tel:0785624625" class="floating-call">
+    📞 Appeler AG L'AUTO 17
+</a>
+
+
+<script src="script.js"></script>
 
 </body>
 
