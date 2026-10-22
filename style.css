@@ -791,4 +791,124 @@ textarea {
         grid-template-columns: 1fr;
         gap: 35px;
     }
+}/* =========================
+   AVIS GOOGLE
+========================= */
+
+.avis-section {
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.avis-slider {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 35px;
+    padding: 10px 0 25px;
+}
+
+.avis-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: avis-defilement 35s linear infinite;
+}
+
+.avis-slider:hover .avis-track {
+    animation-play-state: paused;
+}
+
+.avis-card {
+    width: 350px;
+    min-height: 230px;
+    flex-shrink: 0;
+
+    background: #111111;
+    color: white;
+
+    border-radius: 16px;
+    padding: 25px;
+
+    border-bottom: 4px solid #e30613;
+}
+
+.avis-stars {
+    color: #f5b301;
+    font-size: 23px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.avis-text {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.avis-card strong {
+    display: block;
+    color: white;
+    margin-top: auto;
+}
+
+.avis-card span {
+    display: block;
+    color: #aaaaaa;
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+
+/* BOUTON GOOGLE */
+
+.avis-google-action {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.avis-google-action p {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+
+/* DÉFILEMENT AUTOMATIQUE */
+
+@keyframes avis-defilement {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-50% - 10px));
+    }
+
+}
+
+
+/* TÉLÉPHONE */
+
+@media (max-width: 600px) {
+
+    .avis-card {
+        width: 290px;
+        min-height: 240px;
+    }
+
+    .avis-track {
+        animation-duration: 30s;
+    }
+
+}
+
+
+/* ACCESSIBILITÉ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .avis-track {
+        animation: none;
+    }
+
 }
