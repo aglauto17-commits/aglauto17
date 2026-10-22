@@ -1,0 +1,914 @@
+/* =========================
+   RÉGLAGES GÉNÉRAUX
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #181818;
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(1180px, 92%);
+    margin: auto;
+}
+
+
+/* =========================
+   EN-TÊTE
+========================= */
+
+.header {
+    background: #090909;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid #e30613;
+}
+
+
+/* =========================
+   LOGOS EN HAUT
+========================= */
+
+.header-logos {
+    background: #090909;
+}
+
+.logos-header {
+    min-height: 155px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 350px;
+    height: 125px;
+    object-fit: contain;
+}
+
+.logo-automarques {
+    width: 330px;
+    height: 125px;
+    object-fit: contain;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.header-menu {
+    background: #090909;
+    border-top: 1px solid #333333;
+}
+
+.menu-content {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav a {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.nav a:hover {
+    color: #e30613;
+}
+
+.telephone-header {
+    margin-left: auto;
+    background: #e30613;
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+
+/* =========================
+   ACCUEIL
+========================= */
+
+.hero {
+    min-height: 650px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.92) 0%,
+            rgba(0, 0, 0, 0.70) 45%,
+            rgba(0, 0, 0, 0.20) 100%
+        ),
+        url("images/garage.jpg");
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.petit-titre {
+    display: inline-block;
+    background: #e30613;
+    padding: 5px 12px;
+    margin-bottom: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 78px);
+    max-width: 850px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.hero h1 span {
+    display: block;
+    color: #e30613;
+}
+
+.hero-description {
+    max-width: 700px;
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+.hero-services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 30px 0;
+    font-weight: 700;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+
+/* =========================
+   BOUTONS
+========================= */
+
+.btn {
+    display: inline-block;
+    border: none;
+    padding: 15px 24px;
+    border-radius: 5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn-red {
+    background: #e30613;
+    color: white;
+}
+
+.btn-red:hover {
+    background: #ba000a;
+}
+
+.btn-dark {
+    background: #111111;
+    color: white;
+    border: 1px solid white;
+}
+
+.btn-dark:hover {
+    background: white;
+    color: #111111;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    padding: 85px 0;
+}
+
+.section-mini-title {
+    color: #e30613;
+    font-size: 14px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.section h2,
+.garage-section h2 {
+    font-size: clamp(30px, 5vw, 46px);
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.section-intro {
+    max-width: 700px;
+    margin-bottom: 40px;
+}
+
+.red {
+    color: #e30613;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services-section {
+    background: #f4f4f4;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.service-card {
+    background: #111111;
+    color: white;
+    padding: 30px;
+    border-bottom: 4px solid #e30613;
+    border-radius: 8px;
+}
+
+.service-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   NOTRE GARAGE
+========================= */
+
+.garage-section {
+    background: #090909;
+    color: white;
+}
+
+.garage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.garage-image img {
+    height: 480px;
+    object-fit: cover;
+}
+
+.garage-text {
+    padding: 60px;
+}
+
+.garage-text p {
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   RÉALISATIONS AVANT / APRÈS
+========================= */
+
+.realisations-section {
+    background: #f5f5f5;
+}
+
+.realisations-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.realisation-card {
+    background: white;
+    border: 1px solid #dddddd;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.realisation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* DEUX PHOTOS */
+
+.avant-apres-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.realisation-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.realisation-image:first-child {
+    border-right: 2px solid white;
+}
+
+.realisation-image img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.realisation-card:hover .realisation-image img {
+    transform: scale(1.03);
+}
+
+
+/* AVANT / APRÈS SUR LES PHOTOS */
+
+.photo-badge {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.avant-badge {
+    background: #111111;
+    color: white;
+}
+
+.apres-badge {
+    background: #e30613;
+    color: white;
+}
+
+
+/* TEXTE SOUS LES PHOTOS */
+
+.realisation-content {
+    padding: 20px;
+}
+
+.realisation-tags {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.realisation-tags span {
+    background: #eeeeee;
+    color: #111111;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.realisation-tags .tag-red {
+    background: #ffdfe1;
+    color: #b6000a;
+}
+
+.realisation-content h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.realisation-content p {
+    color: #444444;
+}
+/* =========================
+   RENDEZ-VOUS & DEVIS
+========================= */
+
+.rdv-section {
+    background: #111111;
+    color: white;
+}
+
+.contact-form {
+    margin-top: 35px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label,
+.form-group p {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    font: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.radio-line {
+    display: inline-flex !important;
+    align-items: center;
+    margin-right: 25px;
+}
+
+.radio-line input {
+    width: auto;
+    margin-right: 8px;
+}
+
+.form-help {
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: normal !important;
+    opacity: 0.75;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+    background: #f3f3f3;
+    color: #111111;
+}
+
+.contact-section h2 {
+    margin-bottom: 35px;
+}
+
+.contact-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: stretch;
+}
+
+
+/* CARTE COORDONNÉES */
+
+.contact-card {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.contact-coordinates {
+    background: #111111;
+    color: white;
+    padding: 35px;
+}
+
+.contact-card h3 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.contact-line {
+    padding: 17px 0;
+    border-bottom: 1px solid #333333;
+}
+
+.contact-label {
+    display: block;
+    color: #e30613;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.contact-line p {
+    margin: 0;
+}
+
+.contact-line a {
+    text-decoration: underline;
+}
+
+.contact-line a:hover {
+    color: #e30613;
+}
+
+
+/* BOUTON ITINÉRAIRE */
+
+.itineraire-btn {
+    display: inline-block;
+    margin-top: 25px;
+    background: #e30613;
+    color: white;
+    padding: 14px 22px;
+    border-radius: 10px;
+    font-weight: 800;
+}
+
+.itineraire-btn:hover {
+    background: #ba000a;
+}
+
+
+/* CARTE HORAIRES */
+
+.horaires-card {
+    background: white;
+    padding: 35px;
+    border: 1px solid #dddddd;
+    color: #111111;
+}
+
+.horaire-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 14px 0;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.horaire-line strong {
+    text-align: right;
+}
+
+.horaire-info {
+    margin-top: 18px;
+    background: #fff2d5;
+    padding: 18px;
+    border-radius: 12px;
+}
+
+
+/* =========================
+   BOUTON APPEL FIXE
+========================= */
+
+.floating-call {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 9999;
+
+    background: #e30613;
+    color: white;
+
+    padding: 15px 22px;
+    border-radius: 12px;
+
+    font-weight: 800;
+    font-size: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.35);
+
+    transition: 0.2s ease;
+}
+
+.floating-call:hover {
+    background: #ba000a;
+    transform: translateY(-3px);
+}
+/* =========================
+   PIED DE PAGE
+========================= */
+
+.footer {
+    background: #000000;
+    color: #aaaaaa;
+    text-align: center;
+    padding: 25px 0;
+    border-top: 1px solid #333333;
+}
+
+.footer a:hover {
+    color: #e30613;
+}
+
+
+/* =========================
+   TABLETTE
+========================= */
+
+@media (max-width: 900px) {
+
+    .logos-header {
+        min-height: 125px;
+        gap: 30px;
+    }
+
+    .logo img {
+        width: 260px;
+        height: 100px;
+    }
+
+    .logo-automarques {
+        width: 240px;
+        height: 100px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .menu-content {
+        justify-content: flex-end;
+    }
+
+    .telephone-header {
+        margin-left: auto;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .garage-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================
+   TÉLÉPHONE
+========================= */
+
+@media (max-width: 600px) {
+    .realisations-grid {
+    grid-template-columns: 1fr;
+}
+
+.realisation-image img {
+    height: 190px;
+}
+.contact-cards {
+    grid-template-columns: 1fr;
+}
+
+.contact-coordinates,
+.horaires-card {
+    padding: 25px;
+}
+
+.horaire-line {
+    gap: 10px;
+}
+
+.floating-call {
+    right: 10px;
+    bottom: 10px;
+    padding: 12px 16px;
+    font-size: 13px;
+}
+    .logos-header {
+        min-height: 100px;
+        gap: 15px;
+    }
+
+    .logo img {
+        width: 170px;
+        height: 80px;
+    }
+
+    .logo-automarques {
+        width: 145px;
+        height: 80px;
+    }
+
+    .menu-content {
+        min-height: 60px;
+        justify-content: center;
+    }
+
+    .telephone-header {
+        margin: auto;
+        font-size: 14px;
+        padding: 10px 18px;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero-services {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .garage-text {
+        padding: 40px 20px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+}/* =========================
+   AVIS GOOGLE
+========================= */
+
+.avis-section {
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.avis-slider {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 35px;
+    padding: 10px 0 25px;
+}
+
+.avis-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: avis-defilement 35s linear infinite;
+}
+
+.avis-slider:hover .avis-track {
+    animation-play-state: paused;
+}
+
+.avis-card {
+    width: 350px;
+    min-height: 230px;
+    flex-shrink: 0;
+
+    background: #111111;
+    color: white;
+
+    border-radius: 16px;
+    padding: 25px;
+
+    border-bottom: 4px solid #e30613;
+}
+
+.avis-stars {
+    color: #f5b301;
+    font-size: 23px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.avis-text {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.avis-card strong {
+    display: block;
+    color: white;
+    margin-top: auto;
+}
+
+.avis-card span {
+    display: block;
+    color: #aaaaaa;
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+
+/* BOUTON GOOGLE */
+
+.avis-google-action {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.avis-google-action p {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+
+/* DÉFILEMENT AUTOMATIQUE */
+
+@keyframes avis-defilement {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-50% - 10px));
+    }
+
+}
+
+
+/* TÉLÉPHONE */
+
+@media (max-width: 600px) {
+
+    .avis-card {
+        width: 290px;
+        min-height: 240px;
+    }
+
+    .avis-track {
+        animation-duration: 30s;
+    }
+
+}
+
+
+/* ACCESSIBILITÉ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .avis-track {
+        animation: none;
+    }
+
+}
